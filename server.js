@@ -1,13 +1,9 @@
-const cors = require('cors')
 const express = require('express')
 const server = express()
-const bodyparser = require('body-parser')
 const port = 3000
 
-server.use(cors())
-server.use(bodyparser.urlencoded({extended:false}))
-server.use(bodyparser.json())
-
+server.use(express.json())
+server.use(express.urlencoded({extended:false}))
 
 const frutas = ['Maça', 'Uva', 'Banana']
 
